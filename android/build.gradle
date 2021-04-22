@@ -33,9 +33,11 @@ android {
     targetSdkVersion getExtOrIntegerDefault('targetSdkVersion')
     versionCode 1
     versionName "1.0"
-    
+      ndk {
+       abiFilters "armeabi", "armeabi-v7a", "arm64-v8a"
+   }
   }
-  
+
   buildTypes {
     release {
       minifyEnabled false
@@ -114,10 +116,10 @@ repositories {
   }
 
   if (!found) {
-    throw new GradleException(
-            "${project.name}: unable to locate React Native android sources. " +
-                    "Ensure you have you installed React Native as a dependency in your project and try again."
-    )
+//    throw new GradleException(
+//            "${project.name}: unable to locate React Native android sources. " +
+//                    "Ensure you have you installed React Native as a dependency in your project and try again."
+//    )
   }
 }
 
@@ -127,4 +129,7 @@ dependencies {
   // noinspection GradleDynamicVersion
   api 'com.facebook.react:react-native:+'
   implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+  implementation 'com.tencent.liteav:LiteAVSDK_TRTC:latest.release'
+  implementation 'com.tencent.imsdk:imsdk:4.9.1'
+  implementation 'com.google.code.gson:gson:2.8.6'
 }
