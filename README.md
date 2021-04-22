@@ -15,7 +15,9 @@ import TrtcVoiceRoom from "react-native-trtc-voice-room";
 
 // ...
 
-const result = await TrtcVoiceRoom.multiply(3, 7);
+const result = await TrtcVoiceRoom.login(sdkAppId,userId,userSig);
+
+const result = await TrtcVoiceRoom.createRoom(roomID,roomParam);
 ```
 
 ## Contributing
