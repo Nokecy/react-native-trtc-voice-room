@@ -85,6 +85,16 @@ public class TXRoomService extends V2TIMSDKListener {
     }
 
     public void login(int sdkAppId, final String userId, String userSig, final TXCallback callback) {
+        int loginStatus= V2TIMManager.getInstance().getLoginStatus();
+        if (loginStatus == 1)
+        {
+          mIsLogin= true;
+          mSelfUserId = V2TIMManager.getInstance().getLoginUser();
+          if (callback != null) {
+            callback.onCallback(0, "login im success.");
+          }
+          return;
+        }
         // 未初始化 IM 先初始化 IM
         if (!mIsInitIMSDK) {
             V2TIMSDKConfig config = new V2TIMSDKConfig();
