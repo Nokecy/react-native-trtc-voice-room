@@ -17,10 +17,10 @@ import com.facebook.react.modules.core.DeviceEventManagerModule;
 import java.util.ArrayList;
 import java.util.List;
 
-public class TrtcVoiceRoomModule extends ReactContextBaseJavaModule implements TRTCVoiceRoomDelegate {
+public class TRTCVoiceRoomModule extends ReactContextBaseJavaModule implements TRTCVoiceRoomDelegate {
   private static ReactApplicationContext reactContext;
 
-  public TrtcVoiceRoomModule(ReactApplicationContext context) {
+  public TRTCVoiceRoomModule(ReactApplicationContext context) {
     super(context);
     reactContext = context;
   }

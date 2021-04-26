@@ -10,7 +10,7 @@ import java.util.Collections;
 import java.util.List;
 
 
-class TrtcVoiceRoomPackage implements ReactPackage {
+class TRTCVoiceRoomPackage implements ReactPackage {
      @Override
   public List<ViewManager> createViewManagers(ReactApplicationContext reactContext) {
     return Collections.emptyList();
@@ -21,7 +21,7 @@ class TrtcVoiceRoomPackage implements ReactPackage {
                               ReactApplicationContext reactContext) {
     List<NativeModule> modules = new ArrayList<>();
 
-    modules.add(new TrtcVoiceRoomModule(reactContext));
+    modules.add(new TRTCVoiceRoomModule(reactContext));
 
     return modules;
   }
