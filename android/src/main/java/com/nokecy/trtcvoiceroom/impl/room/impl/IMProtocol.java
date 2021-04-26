@@ -1,13 +1,13 @@
-package com.reactnativetrtcvoiceroom.impl.room.impl;
+package com.nokecy.trtcvoiceroom.impl.room.impl;
 
 import android.text.TextUtils;
 import android.util.Pair;
 
 import com.google.gson.Gson;
-import com.reactnativetrtcvoiceroom.impl.base.TRTCLogger;
-import com.reactnativetrtcvoiceroom.impl.base.TXInviteData;
-import com.reactnativetrtcvoiceroom.impl.base.TXRoomInfo;
-import com.reactnativetrtcvoiceroom.impl.base.TXSeatInfo;
+import com.nokecy.trtcvoiceroom.impl.base.TRTCLogger;
+import com.nokecy.trtcvoiceroom.impl.base.TXInviteData;
+import com.nokecy.trtcvoiceroom.impl.base.TXRoomInfo;
+import com.nokecy.trtcvoiceroom.impl.base.TXSeatInfo;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -17,15 +17,15 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import static com.reactnativetrtcvoiceroom.impl.room.impl.IMProtocol.Define.CODE_ROOM_CUSTOM_MSG;
-import static com.reactnativetrtcvoiceroom.impl.room.impl.IMProtocol.Define.CODE_ROOM_DESTROY;
-import static com.reactnativetrtcvoiceroom.impl.room.impl.IMProtocol.Define.KEY_ATTR_VERSION;
-import static com.reactnativetrtcvoiceroom.impl.room.impl.IMProtocol.Define.KEY_CMD_ACTION;
-import static com.reactnativetrtcvoiceroom.impl.room.impl.IMProtocol.Define.KEY_CMD_VERSION;
-import static com.reactnativetrtcvoiceroom.impl.room.impl.IMProtocol.Define.KEY_ROOM_INFO;
-import static com.reactnativetrtcvoiceroom.impl.room.impl.IMProtocol.Define.KEY_SEAT;
-import static com.reactnativetrtcvoiceroom.impl.room.impl.IMProtocol.Define.VALUE_ATTR_VERSION;
-import static com.reactnativetrtcvoiceroom.impl.room.impl.IMProtocol.Define.VALUE_CMD_VERSION;
+import static com.nokecy.trtcvoiceroom.impl.room.impl.IMProtocol.Define.CODE_ROOM_CUSTOM_MSG;
+import static com.nokecy.trtcvoiceroom.impl.room.impl.IMProtocol.Define.CODE_ROOM_DESTROY;
+import static com.nokecy.trtcvoiceroom.impl.room.impl.IMProtocol.Define.KEY_ATTR_VERSION;
+import static com.nokecy.trtcvoiceroom.impl.room.impl.IMProtocol.Define.KEY_CMD_ACTION;
+import static com.nokecy.trtcvoiceroom.impl.room.impl.IMProtocol.Define.KEY_CMD_VERSION;
+import static com.nokecy.trtcvoiceroom.impl.room.impl.IMProtocol.Define.KEY_ROOM_INFO;
+import static com.nokecy.trtcvoiceroom.impl.room.impl.IMProtocol.Define.KEY_SEAT;
+import static com.nokecy.trtcvoiceroom.impl.room.impl.IMProtocol.Define.VALUE_ATTR_VERSION;
+import static com.nokecy.trtcvoiceroom.impl.room.impl.IMProtocol.Define.VALUE_CMD_VERSION;
 
 public class IMProtocol {
     private static final String TAG = IMProtocol.class.getName();

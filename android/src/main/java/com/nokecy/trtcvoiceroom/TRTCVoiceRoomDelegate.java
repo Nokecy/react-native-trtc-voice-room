@@ -1,6 +1,6 @@
-package com.reactnativetrtcvoiceroom;
+package com.nokecy.trtcvoiceroom;
 
-import com.reactnativetrtcvoiceroom.TRTCVoiceRoomDef.SeatInfo;
+import com.nokecy.trtcvoiceroom.TRTCVoiceRoomDef.SeatInfo;
 
 import java.util.List;
 

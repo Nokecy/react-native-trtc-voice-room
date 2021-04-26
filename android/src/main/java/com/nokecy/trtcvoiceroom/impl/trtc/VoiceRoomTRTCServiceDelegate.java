@@ -1,4 +1,4 @@
-package com.reactnativetrtcvoiceroom.impl.trtc;
+package com.nokecy.trtcvoiceroom.impl.trtc;
 
 import com.tencent.trtc.TRTCCloudDef;
 

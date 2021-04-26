@@ -1,4 +1,4 @@
-package com.reactnativetrtcvoiceroom.impl.room.impl;
+package com.nokecy.trtcvoiceroom.impl.room.impl;
 
 import android.content.Context;
 import android.text.TextUtils;
@@ -19,15 +19,15 @@ import com.tencent.imsdk.v2.V2TIMSignalingListener;
 import com.tencent.imsdk.v2.V2TIMSimpleMsgListener;
 import com.tencent.imsdk.v2.V2TIMUserFullInfo;
 import com.tencent.imsdk.v2.V2TIMValueCallback;
-import com.reactnativetrtcvoiceroom.impl.base.TRTCLogger;
-import com.reactnativetrtcvoiceroom.impl.base.TXCallback;
-import com.reactnativetrtcvoiceroom.impl.base.TXInviteData;
-import com.reactnativetrtcvoiceroom.impl.base.TXRoomInfo;
-import com.reactnativetrtcvoiceroom.impl.base.TXRoomInfoListCallback;
-import com.reactnativetrtcvoiceroom.impl.base.TXSeatInfo;
-import com.reactnativetrtcvoiceroom.impl.base.TXUserInfo;
-import com.reactnativetrtcvoiceroom.impl.base.TXUserListCallback;
-import com.reactnativetrtcvoiceroom.impl.room.ITXRoomServiceDelegate;
+import com.nokecy.trtcvoiceroom.impl.base.TRTCLogger;
+import com.nokecy.trtcvoiceroom.impl.base.TXCallback;
+import com.nokecy.trtcvoiceroom.impl.base.TXInviteData;
+import com.nokecy.trtcvoiceroom.impl.base.TXRoomInfo;
+import com.nokecy.trtcvoiceroom.impl.base.TXRoomInfoListCallback;
+import com.nokecy.trtcvoiceroom.impl.base.TXSeatInfo;
+import com.nokecy.trtcvoiceroom.impl.base.TXUserInfo;
+import com.nokecy.trtcvoiceroom.impl.base.TXUserListCallback;
+import com.nokecy.trtcvoiceroom.impl.room.ITXRoomServiceDelegate;
 
 import org.json.JSONException;
 import org.json.JSONObject;

@@ -1,4 +1,4 @@
-package com.reactnativetrtcvoiceroom.impl.base;
+package com.nokecy.trtcvoiceroom.impl.base;
 
 import java.io.Serializable;
 

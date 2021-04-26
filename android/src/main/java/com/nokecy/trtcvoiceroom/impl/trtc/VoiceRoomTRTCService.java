@@ -1,4 +1,4 @@
-package com.reactnativetrtcvoiceroom.impl.trtc;
+package com.nokecy.trtcvoiceroom.impl.trtc;
 
 import android.content.Context;
 import android.os.Bundle;
@@ -8,8 +8,8 @@ import android.text.TextUtils;
 
 import com.tencent.liteav.audio.TXAudioEffectManager;
 import com.tencent.liteav.beauty.TXBeautyManager;
-import com.reactnativetrtcvoiceroom.impl.base.TRTCLogger;
-import com.reactnativetrtcvoiceroom.impl.base.TXCallback;
+import com.nokecy.trtcvoiceroom.impl.base.TRTCLogger;
+import com.nokecy.trtcvoiceroom.impl.base.TXCallback;
 import com.tencent.trtc.TRTCCloud;
 import com.tencent.trtc.TRTCCloudDef;
 import com.tencent.trtc.TRTCCloudListener;

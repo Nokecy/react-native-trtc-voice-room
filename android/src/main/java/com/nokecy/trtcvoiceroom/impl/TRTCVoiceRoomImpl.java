@@ -1,4 +1,4 @@
-package com.reactnativetrtcvoiceroom.impl;
+package com.nokecy.trtcvoiceroom.impl;
 
 import android.content.Context;
 import android.os.Handler;
@@ -6,21 +6,21 @@ import android.os.Looper;
 import android.text.TextUtils;
 
 import com.tencent.liteav.audio.TXAudioEffectManager;
-import com.reactnativetrtcvoiceroom.TRTCVoiceRoom;
-import com.reactnativetrtcvoiceroom.TRTCVoiceRoomCallback;
-import com.reactnativetrtcvoiceroom.TRTCVoiceRoomDef;
-import com.reactnativetrtcvoiceroom.TRTCVoiceRoomDelegate;
-import com.reactnativetrtcvoiceroom.impl.base.TRTCLogger;
-import com.reactnativetrtcvoiceroom.impl.base.TXCallback;
-import com.reactnativetrtcvoiceroom.impl.base.TXRoomInfo;
-import com.reactnativetrtcvoiceroom.impl.base.TXRoomInfoListCallback;
-import com.reactnativetrtcvoiceroom.impl.base.TXSeatInfo;
-import com.reactnativetrtcvoiceroom.impl.base.TXUserInfo;
-import com.reactnativetrtcvoiceroom.impl.base.TXUserListCallback;
-import com.reactnativetrtcvoiceroom.impl.room.ITXRoomServiceDelegate;
-import com.reactnativetrtcvoiceroom.impl.room.impl.TXRoomService;
-import com.reactnativetrtcvoiceroom.impl.trtc.VoiceRoomTRTCService;
-import com.reactnativetrtcvoiceroom.impl.trtc.VoiceRoomTRTCServiceDelegate;
+import com.nokecy.trtcvoiceroom.TRTCVoiceRoom;
+import com.nokecy.trtcvoiceroom.TRTCVoiceRoomCallback;
+import com.nokecy.trtcvoiceroom.TRTCVoiceRoomDef;
+import com.nokecy.trtcvoiceroom.TRTCVoiceRoomDelegate;
+import com.nokecy.trtcvoiceroom.impl.base.TRTCLogger;
+import com.nokecy.trtcvoiceroom.impl.base.TXCallback;
+import com.nokecy.trtcvoiceroom.impl.base.TXRoomInfo;
+import com.nokecy.trtcvoiceroom.impl.base.TXRoomInfoListCallback;
+import com.nokecy.trtcvoiceroom.impl.base.TXSeatInfo;
+import com.nokecy.trtcvoiceroom.impl.base.TXUserInfo;
+import com.nokecy.trtcvoiceroom.impl.base.TXUserListCallback;
+import com.nokecy.trtcvoiceroom.impl.room.ITXRoomServiceDelegate;
+import com.nokecy.trtcvoiceroom.impl.room.impl.TXRoomService;
+import com.nokecy.trtcvoiceroom.impl.trtc.VoiceRoomTRTCService;
+import com.nokecy.trtcvoiceroom.impl.trtc.VoiceRoomTRTCServiceDelegate;
 import com.tencent.trtc.TRTCCloudDef;
 
 import java.util.ArrayList;

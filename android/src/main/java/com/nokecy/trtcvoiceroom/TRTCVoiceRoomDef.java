@@ -1,4 +1,4 @@
-package com.reactnativetrtcvoiceroom;
+package com.nokecy.trtcvoiceroom;
 
 import java.util.List;
 

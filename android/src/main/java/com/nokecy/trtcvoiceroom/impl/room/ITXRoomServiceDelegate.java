@@ -1,9 +1,9 @@
-package com.reactnativetrtcvoiceroom.impl.room;
+package com.nokecy.trtcvoiceroom.impl.room;
 
 
-import com.reactnativetrtcvoiceroom.impl.base.TXRoomInfo;
-import com.reactnativetrtcvoiceroom.impl.base.TXSeatInfo;
-import com.reactnativetrtcvoiceroom.impl.base.TXUserInfo;
+import com.nokecy.trtcvoiceroom.impl.base.TXRoomInfo;
+import com.nokecy.trtcvoiceroom.impl.base.TXSeatInfo;
+import com.nokecy.trtcvoiceroom.impl.base.TXUserInfo;
 
 import java.util.List;
 

@@ -1,4 +1,4 @@
-package com.reactnativetrtcvoiceroom;
+package com.nokecy.trtcvoiceroom;
 
 import com.facebook.react.ReactPackage;
 import com.facebook.react.bridge.NativeModule;

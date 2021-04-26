@@ -1,10 +1,10 @@
-package com.reactnativetrtcvoiceroom;
+package com.nokecy.trtcvoiceroom;
 
 import android.content.Context;
 import android.os.Handler;
 
 import com.tencent.liteav.audio.TXAudioEffectManager;
-import com.reactnativetrtcvoiceroom.impl.TRTCVoiceRoomImpl;
+import com.nokecy.trtcvoiceroom.impl.TRTCVoiceRoomImpl;
 
 import java.util.List;
 
