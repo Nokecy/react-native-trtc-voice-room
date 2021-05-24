@@ -38,7 +38,7 @@ public class TRTCVoiceRoomModule extends ReactContextBaseJavaModule implements T
   }
 
   @ReactMethod
-  public void logoin(int sdkAppID, String userId, String userSig, Promise promise) {
+  public void login(int sdkAppID, String userId, String userSig, Promise promise) {
     TRTCVoiceRoom.sharedInstance(reactContext).setDelegate(this);
 
     TRTCVoiceRoom.sharedInstance(reactContext).login(sdkAppID, userId, userSig, new TRTCVoiceRoomCallback.ActionCallback() {
