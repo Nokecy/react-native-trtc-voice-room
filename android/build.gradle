@@ -130,6 +130,6 @@ dependencies {
   api 'com.facebook.react:react-native:+'
   implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
   implementation 'com.tencent.liteav:LiteAVSDK_TRTC:latest.release'
-  implementation 'com.tencent.imsdk:imsdk:4.9.1'
+  implementation 'com.tencent.imsdk:imsdk:5.1.56'
   implementation 'com.google.code.gson:gson:2.8.6'
 }
