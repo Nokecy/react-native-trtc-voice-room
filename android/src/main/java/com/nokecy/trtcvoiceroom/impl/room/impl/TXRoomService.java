@@ -13,6 +13,7 @@ import com.tencent.imsdk.v2.V2TIMGroupMemberInfo;
 import com.tencent.imsdk.v2.V2TIMGroupMemberInfoResult;
 import com.tencent.imsdk.v2.V2TIMManager;
 import com.tencent.imsdk.v2.V2TIMMessage;
+import com.tencent.imsdk.v2.V2TIMOfflinePushInfo;
 import com.tencent.imsdk.v2.V2TIMSDKConfig;
 import com.tencent.imsdk.v2.V2TIMSDKListener;
 import com.tencent.imsdk.v2.V2TIMSignalingListener;
@@ -872,7 +873,7 @@ public class TXRoomService extends V2TIMSDKListener {
     public String sendInvitation(String cmd, String userId, String content, final TXCallback callback) {
         String json = IMProtocol.getInvitationMsg(mRoomId, cmd, content);
         TRTCLogger.i(TAG, "send " + userId + " json:" + json);
-        return V2TIMManager.getSignalingManager().invite(userId, json, 0, new V2TIMCallback() {
+        return V2TIMManager.getSignalingManager().invite(userId, json, false,new V2TIMOfflinePushInfo(),30, new V2TIMCallback() {
             @Override
             public void onError(int i, String s) {
                 TRTCLogger.e(TAG, "sendInvitation error " + i);
