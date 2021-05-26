@@ -10,6 +10,6 @@
 #import "TRTCVoiceRoom.h"
 #import "TRTCVoiceRoomDelegate.h"
 
-@interface TrtcVoiceRoom : RCTEventEmitter<RCTBridgeModule, TRTCVoiceRoomDelegate>
+@interface TrtcVoiceRoomModule : RCTEventEmitter<RCTBridgeModule, TRTCVoiceRoomDelegate>
 
 @end

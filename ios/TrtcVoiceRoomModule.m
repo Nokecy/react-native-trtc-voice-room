@@ -4,13 +4,13 @@
 //
 //  Created by 黎剑锋 on 2021/4/19.
 //
-#import "TrtcVoiceRoom.h"
+#import "TrtcVoiceRoomModule.h"
 #import <MJExtension.h>
 
-@implementation TrtcVoiceRoom
+@implementation TrtcVoiceRoomModule
 
 
-RCT_EXPORT_MODULE();
+RCT_EXPORT_MODULE(@"TrtcVoiceRoom");
 
 -(NSArray<NSString *> *)supportedEvents{
   NSArray<NSString*>* array = @[
