@@ -58,7 +58,7 @@ public class TRTCVoiceRoomModule extends ReactContextBaseJavaModule implements T
     TRTCVoiceRoomDef.RoomParam param = new TRTCVoiceRoomDef.RoomParam();
     param.roomName = roomParam.getString("roomName");
     param.coverUrl = roomParam.getString("coverUrl");
-    param.needRequest = roomParam.getBoolean("needRequest");
+    // param.needRequest = roomParam.getBoolean("needRequest");
     param.seatCount = roomParam.getInt("seatCount");
 //    param.seatInfoList = roomParam.getArray("seatInfoList");
     TRTCVoiceRoom.sharedInstance(reactContext).createRoom(roomID, param, (code, msg) -> {
