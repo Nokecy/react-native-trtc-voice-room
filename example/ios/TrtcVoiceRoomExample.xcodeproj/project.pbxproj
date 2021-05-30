@@ -394,10 +394,12 @@
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-TrtcVoiceRoomExample/Pods-TrtcVoiceRoomExample-frameworks.sh",
 				"${PODS_ROOT}/TXIMSDK_iOS/ImSDK.framework",
+				"${PODS_XCFRAMEWORKS_BUILD_DIR}/OpenSSL/OpenSSL.framework/OpenSSL",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ImSDK.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/OpenSSL.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
