@@ -8,7 +8,7 @@ export default function App() {
   const [result, setResult] = React.useState<number | undefined>();
 
   React.useEffect(() => {
-    TrtcVoiceRoom.multiply(3, 7).then(setResult);
+    TrtcVoiceRoom.closeSeat(1,true);
   }, []);
 
   return (

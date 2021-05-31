@@ -10,7 +10,7 @@
 @implementation TrtcVoiceRoomModule
 
 
-RCT_EXPORT_MODULE(@"TrtcVoiceRoom");
+RCT_EXPORT_MODULE();
 
 -(NSArray<NSString *> *)supportedEvents{
   NSArray<NSString*>* array = @[

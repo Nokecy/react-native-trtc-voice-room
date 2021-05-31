@@ -5,8 +5,8 @@ import type {
   VoiceRoomUserInfo,
 } from './interface';
 
-const { TrtcVoiceRoom } = NativeModules;
-const TRTCVoiceRoomEventEmitter = new NativeEventEmitter(TrtcVoiceRoom);
+const { TrtcVoiceRoomModule } = NativeModules;
+const TRTCVoiceRoomEventEmitter = new NativeEventEmitter(TrtcVoiceRoomModule);
 
 export default class TRTCVoiceRoomNative {
   static login(
@@ -14,7 +14,7 @@ export default class TRTCVoiceRoomNative {
     userId: string,
     userSig: string
   ): Promise<any> {
-    return TrtcVoiceRoom?.login(sdkAppId, userId, userSig);
+    return TrtcVoiceRoomModule?.login(sdkAppId, userId, userSig);
   }
   /**
    * 创建房间（主播调用）
@@ -30,7 +30,7 @@ export default class TRTCVoiceRoomNative {
    * - parameter callback     创建房间的结果回调，成功时 code 为0.
    */
   static createRoom(roomID: number, roomParam?: VoiceRoomParam): Promise<any> {
-    return TrtcVoiceRoom?.createRoom(roomID, roomParam);
+    return TrtcVoiceRoomModule?.createRoom(roomID, roomParam);
   }
 
   /**
@@ -39,7 +39,7 @@ export default class TRTCVoiceRoomNative {
    * 主播在创建房间后，可以调用这个函数来销毁房间。
    */
   static destroyRoom(): Promise<any> {
-    return TrtcVoiceRoom?.destroyRoom();
+    return TrtcVoiceRoomModule?.destroyRoom();
   }
 
   /**
@@ -56,7 +56,7 @@ export default class TRTCVoiceRoomNative {
    * - parameter callback 进入房间是否成功的结果回调
    */
   static enterRoom(roomID: number): Promise<any> {
-    return TrtcVoiceRoom?.enterRoom(roomID);
+    return TrtcVoiceRoomModule?.enterRoom(roomID);
   }
 
   /**
@@ -65,7 +65,7 @@ export default class TRTCVoiceRoomNative {
    * - parameter callback 退出房间是否成功的结果回调
    */
   static exitRoom(): Promise<any> {
-    return TrtcVoiceRoom?.exitRoom();
+    return TrtcVoiceRoomModule?.exitRoom();
   }
 
   /**
@@ -79,7 +79,7 @@ export default class TRTCVoiceRoomNative {
   static getRoomInfoList(
     roomIdList: number[]
   ): Promise<{ roomInfos: VoiceRoomInfo[] }> {
-    return TrtcVoiceRoom?.getRoomInfoList(roomIdList);
+    return TrtcVoiceRoomModule?.getRoomInfoList(roomIdList);
   }
 
   /**
@@ -91,7 +91,7 @@ export default class TRTCVoiceRoomNative {
   static getUserInfoList(
     userIDList: string[]
   ): Promise<{ userInfos: VoiceRoomUserInfo[] }> {
-    return TrtcVoiceRoom?.getUserInfoList(userIDList);
+    return TrtcVoiceRoomModule?.getUserInfoList(userIDList);
   }
 
   /**
@@ -103,7 +103,7 @@ export default class TRTCVoiceRoomNative {
    * - parameter callback     操作回调
    */
   static enterSeat(seatIndex: number): Promise<any> {
-    return TrtcVoiceRoom?.enterSeat(seatIndex);
+    return TrtcVoiceRoomModule?.enterSeat(seatIndex);
   }
 
   /**
@@ -114,7 +114,7 @@ export default class TRTCVoiceRoomNative {
    * - parameter callback 操作回调
    */
   static leaveSeat(): Promise<any> {
-    return TrtcVoiceRoom?.leaveSeat();
+    return TrtcVoiceRoomModule?.leaveSeat();
   }
 
   /**
@@ -126,7 +126,7 @@ export default class TRTCVoiceRoomNative {
    * - parameter callback     操作回调
    */
   static kickSeat(seatIndex: number): Promise<any> {
-    return TrtcVoiceRoom?.kickSeat(seatIndex);
+    return TrtcVoiceRoomModule?.kickSeat(seatIndex);
   }
 
   /**
@@ -137,7 +137,7 @@ export default class TRTCVoiceRoomNative {
    * - parameter callback     操作回调
    */
   static muteSeat(seatIndex: number, isMute: boolean) {
-    return TrtcVoiceRoom?.muteSeat(seatIndex, isMute);
+    return TrtcVoiceRoomModule?.muteSeat(seatIndex, isMute);
   }
 
   /**
@@ -148,21 +148,21 @@ export default class TRTCVoiceRoomNative {
    * - parameter callback     操作回调
    */
   static closeSeat(seatIndex: number, isClose: boolean) {
-    return TrtcVoiceRoom?.closeSeat(seatIndex, isClose);
+    return TrtcVoiceRoomModule?.closeSeat(seatIndex, isClose);
   }
 
   /**
    * 开启麦克风采集
    */
   static startMicrophone() {
-    return TrtcVoiceRoom?.startMicrophone();
+    return TrtcVoiceRoomModule?.startMicrophone();
   }
 
   /**
    * 停止麦克风采集
    */
   static stopMicrophone() {
-    return TrtcVoiceRoom?.stopMicrophone();
+    return TrtcVoiceRoomModule?.stopMicrophone();
   }
 
   /**
@@ -171,7 +171,7 @@ export default class TRTCVoiceRoomNative {
    * - parameter mute 是否静音
    */
   static muteLocalAudio(mute: boolean) {
-    return TrtcVoiceRoom?.muteLocalAudio(mute);
+    return TrtcVoiceRoomModule?.muteLocalAudio(mute);
   }
 
   /**
@@ -180,7 +180,7 @@ export default class TRTCVoiceRoomNative {
    * - parameter useSpeaker  true : 扬声器，false : 听筒
    */
   static setSpeaker(userSpeaker: boolean) {
-    return TrtcVoiceRoom?.setSpeaker(userSpeaker);
+    return TrtcVoiceRoomModule?.setSpeaker(userSpeaker);
   }
 
   /**
@@ -190,7 +190,7 @@ export default class TRTCVoiceRoomNative {
    * - parameter mute     true : 静音，false : 解除静音
    */
   static muteRemoteAudio(userId: string, mute: boolean) {
-    return TrtcVoiceRoom?.muteRemoteAudio(userId, mute);
+    return TrtcVoiceRoomModule?.muteRemoteAudio(userId, mute);
   }
 
   /**
@@ -199,7 +199,7 @@ export default class TRTCVoiceRoomNative {
    * - parameter isMute true : 静音，false : 解除静音
    */
   static muteAllRemoteAudio(mute: boolean) {
-    return TrtcVoiceRoom?.muteAllRemoteAudio(mute);
+    return TrtcVoiceRoomModule?.muteAllRemoteAudio(mute);
   }
 
   /**
@@ -209,7 +209,7 @@ export default class TRTCVoiceRoomNative {
    * - parameter callback 发送结果回调
    */
   static sendRoomTextMsg(message: string) {
-    return TrtcVoiceRoom?.sendRoomTextMsg(message);
+    return TrtcVoiceRoomModule?.sendRoomTextMsg(message);
   }
 }
 export { TRTCVoiceRoomEventEmitter };
