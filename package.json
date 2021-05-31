@@ -1,6 +1,6 @@
 {
   "name": "react-native-trtc-voice-room",
-  "version": "0.5.2",
+  "version": "0.5.3",
   "description": "trtc语音聊天室",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
