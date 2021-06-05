@@ -34,7 +34,7 @@ public class TRTCVoiceRoomModule extends ReactContextBaseJavaModule implements T
   @NonNull
   @Override
   public String getName() {
-    return "TrtcVoiceRoom";
+    return "TrtcVoiceRoomModule";
   }
 
   @ReactMethod
