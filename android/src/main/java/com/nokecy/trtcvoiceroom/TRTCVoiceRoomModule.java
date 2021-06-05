@@ -11,6 +11,7 @@ import com.facebook.react.bridge.ReactContextBaseJavaModule;
 import com.facebook.react.bridge.ReactMethod;
 import com.facebook.react.bridge.ReadableArray;
 import com.facebook.react.bridge.ReadableMap;
+import com.facebook.react.bridge.WritableArray;
 import com.facebook.react.bridge.WritableMap;
 import com.facebook.react.modules.core.DeviceEventManagerModule;
 
@@ -113,7 +114,20 @@ public class TRTCVoiceRoomModule extends ReactContextBaseJavaModule implements T
     TRTCVoiceRoom.sharedInstance(reactContext).getRoomInfoList(models, (code, msg, roomInfoList) -> {
       if (code == 0) {
         WritableMap map = Arguments.createMap();
-        map.putArray("roomInfos", Arguments.fromArray(roomInfoList));
+        WritableArray  writableArray = Arguments.createArray();
+        for (int i = 0; i< roomInfoList.size();i++){
+          TRTCVoiceRoomDef.RoomInfo roomInfo = roomInfoList.get(i);
+          WritableMap roomInfoMap = Arguments.createMap();
+          roomInfoMap.putInt("roomId",roomInfo.roomId);
+          roomInfoMap.putString("roomName",roomInfo.roomName);
+          roomInfoMap.putString("coverUrl",roomInfo.coverUrl);
+          roomInfoMap.putInt("memberCount",roomInfo.memberCount);
+          roomInfoMap.putBoolean("needRequest",roomInfo.needRequest);
+          roomInfoMap.putString("ownerId",roomInfo.ownerId);
+          roomInfoMap.putString("ownerName",roomInfo.ownerName);
+          writableArray.pushMap(roomInfoMap);
+        }
+        map.putArray("roomInfos", writableArray);
         promise.resolve(map);
       } else {
         promise.reject(code + "", msg);
@@ -131,7 +145,16 @@ public class TRTCVoiceRoomModule extends ReactContextBaseJavaModule implements T
     TRTCVoiceRoom.sharedInstance(reactContext).getUserInfoList(models, (code, msg, userInfoList) -> {
       if (code == 0) {
         WritableMap map = Arguments.createMap();
-        map.putArray("userInfos", Arguments.fromArray(userInfoList));
+        WritableArray  writableArray = Arguments.createArray();
+        for (int i = 0; i< userInfoList.size();i++){
+          TRTCVoiceRoomDef.UserInfo userInfo = userInfoList.get(i);
+          WritableMap roomInfoMap = Arguments.createMap();
+          roomInfoMap.putString("userAvatar",userInfo.userAvatar);
+          roomInfoMap.putString("userId",userInfo.userId);
+          roomInfoMap.putString("userName",userInfo.userName);
+          writableArray.pushMap(roomInfoMap);
+        }
+        map.putArray("userInfos", writableArray);
         promise.resolve(map);
       } else {
         promise.reject(code + "", msg);
@@ -293,7 +316,16 @@ public class TRTCVoiceRoomModule extends ReactContextBaseJavaModule implements T
   @Override
   public void onSeatListChange(List<TRTCVoiceRoomDef.SeatInfo> seatInfoList) {
     WritableMap map = Arguments.createMap();
-    map.putArray("seatInfolist", Arguments.fromArray(seatInfoList));
+    WritableArray  writableArray = Arguments.createArray();
+    for (int i = 0; i< seatInfoList.size();i++){
+      TRTCVoiceRoomDef.SeatInfo userInfo = seatInfoList.get(i);
+      WritableMap roomInfoMap = Arguments.createMap();
+      roomInfoMap.putString("userId",userInfo.userId);
+      roomInfoMap.putInt("status",userInfo.status);
+      roomInfoMap.putBoolean("mute",userInfo.mute);
+      writableArray.pushMap(roomInfoMap);
+    }
+    map.putArray("seatInfolist", writableArray);
     sendEvent(reactContext, "onSeatInfoChange", map);
   }
 
